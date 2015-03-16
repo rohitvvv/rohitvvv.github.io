@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sun, 15 Mar 2015 18:15:27 +0530</pubDate>
-    <lastBuildDate>Sun, 15 Mar 2015 18:15:27 +0530</lastBuildDate>
+    <pubDate>Mon, 16 Mar 2015 17:42:26 +0530</pubDate>
+    <lastBuildDate>Mon, 16 Mar 2015 17:42:26 +0530</lastBuildDate>
 
     <item>
       <title>JavaFX Introduction</title>
@@ -127,6 +127,7 @@ public class SampleApplication extends Application {
         the JavaFX application.&lt;/li&gt;&lt;/ul&gt; 
 &lt;/P&gt;
 
+&lt;!-- Begin Comments JavaScript Code --&gt;&lt;script type=&quot;text/javascript&quot; async&gt;function ajaxpath_5506c83b47591(url){return window.location.href == &apos;&apos; ? url : url.replace(&apos;&amp;s=&apos;,&apos;&amp;s=&apos; + escape(window.location.href));}(function(){document.write(&apos;&lt;div id=&quot;fcs_div_5506c83b47591&quot;&gt;&lt;a title=&quot;free comment script&quot; href=&quot;http://www.freecommentscript.com&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Free HTML User Comments&lt;/b&gt;...&lt;/a&gt;&lt;/div&gt;&apos;);fcs_5506c83b47591=document.createElement(&apos;script&apos;);fcs_5506c83b47591.type=&quot;text/javascript&quot;;fcs_5506c83b47591.src=ajaxpath_5506c83b47591((document.location.protocol==&quot;https:&quot;?&quot;https:&quot;:&quot;http:&quot;)+&quot;//www.freecommentscript.com/GetComments2.php?p=5506c83b47591&amp;s=&amp;Size=10#!5506c83b47591&quot;);setTimeout(&quot;document.getElementById(&apos;fcs_div_5506c83b47591&apos;).appendChild(fcs_5506c83b47591)&quot;,1);})();&lt;/script&gt;&lt;noscript&gt;&lt;div&gt;&lt;a href=&quot;http://www.freecommentscript.com&quot; title=&quot;free html user comment box&quot;&gt;Free Comment Script&lt;/a&gt;&lt;/div&gt;&lt;/noscript&gt;&lt;!-- End Comments JavaScript Code --&gt;
 
 	</description>
     </item>
