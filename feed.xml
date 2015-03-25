@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Wed, 25 Mar 2015 15:03:09 +0530</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2015 15:03:09 +0530</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2015 15:06:47 +0530</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2015 15:06:47 +0530</lastBuildDate>
 
     <item>
       <title>Invalid signature file digest - Maven solution </title>
@@ -198,9 +198,11 @@ public class SampleApplication extends Application {
     &lt;li&gt;In main (the main entry point for java application) launch is called. This launches
         the JavaFX application.&lt;/li&gt;&lt;/ul&gt; 
 &lt;/P&gt;
-Here is the &lt;a href=&quot;http://www.slideshare.net/RohitVaidya3/java-fx-45822425&quot;&gt;link&lt;/a&gt; to slideshare presentation
-        &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?&apos;http&apos;:&apos;https&apos;;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+&quot;://platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;
-&lt;!-- Begin Comments JavaScript Code --&gt;&lt;script type=&quot;text/javascript&quot; async&gt;function ajaxpath_5506c83b47591(url){return window.location.href == &apos;&apos; ? url : url.replace(&apos;&amp;s=&apos;,&apos;&amp;s=&apos; + escape(window.location.href));}(function(){document.write(&apos;&lt;div id=&quot;fcs_div_5506c83b47591&quot;&gt;&lt;a title=&quot;free comment script&quot; href=&quot;http://www.freecommentscript.com&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Free HTML User Comments&lt;/b&gt;...&lt;/a&gt;&lt;/div&gt;&apos;);fcs_5506c83b47591=document.createElement(&apos;script&apos;);fcs_5506c83b47591.type=&quot;text/javascript&quot;;fcs_5506c83b47591.src=ajaxpath_5506c83b47591((document.location.protocol==&quot;https:&quot;?&quot;https:&quot;:&quot;http:&quot;)+&quot;//www.freecommentscript.com/GetComments2.php?p=5506c83b47591&amp;s=&amp;Size=10#!5506c83b47591&quot;);setTimeout(&quot;document.getElementById(&apos;fcs_div_5506c83b47591&apos;).appendChild(fcs_5506c83b47591)&quot;,1);})();&lt;/script&gt;&lt;noscript&gt;&lt;div&gt;&lt;a href=&quot;http://www.freecommentscript.com&quot; title=&quot;free html user comment box&quot;&gt;Free Comment Script&lt;/a&gt;&lt;/div&gt;&lt;/noscript&gt;&lt;!-- End Comments JavaScript Code --&gt;
+&lt;!-- begin htmlcommentbox.com --&gt;
+ &lt;div id=&quot;HCB_comment_box&quot;&gt;&lt;a href=&quot;http://www.htmlcommentbox.com&quot;&gt;Comment Form&lt;/a&gt; is loading comments...&lt;/div&gt;
+ &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0&quot; /&gt;
+ &lt;script type=&quot;text/javascript&quot; id=&quot;hcb&quot;&gt; /*&lt;!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement(&quot;script&quot;), l=(&quot;&quot;+window.location).replace(/&apos;/g,&quot;%27&quot;) || hcb_user.PAGE, h=&quot;//www.htmlcommentbox.com&quot;;s.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);s.setAttribute(&quot;src&quot;, h+&quot;/jread?page=&quot;+encodeURIComponent(l).replace(&quot;+&quot;,&quot;%2B&quot;)+&quot;&amp;opts=16862&amp;num=10&quot;);if (typeof s!=&quot;undefined&quot;) document.getElementsByTagName(&quot;head&quot;)[0].appendChild(s);})(); /*--&gt;*/ &lt;/script&gt;
+&lt;!-- end htmlcommentbox.com --&gt;
 
 	</description>
     </item>
