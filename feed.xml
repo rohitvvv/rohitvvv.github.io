@@ -6,8 +6,8 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Wed, 25 Mar 2015 12:07:22 +0530</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2015 12:07:22 +0530</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2015 15:03:09 +0530</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2015 15:03:09 +0530</lastBuildDate>
 
     <item>
       <title>Invalid signature file digest - Maven solution </title>
@@ -74,8 +74,11 @@ Hope this helps :)
     &lt;li&gt;&lt;a href=&quot;https://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artifacts.html&quot;&gt;Apache Maven - Unpacking Specific Artifacts&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-
-
+&lt;!-- begin htmlcommentbox.com --&gt;
+ &lt;div id=&quot;HCB_comment_box&quot;&gt;&lt;a href=&quot;http://www.htmlcommentbox.com&quot;&gt;Comment Box&lt;/a&gt; is loading comments...&lt;/div&gt;
+ &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0&quot; /&gt;
+ &lt;script type=&quot;text/javascript&quot; id=&quot;hcb&quot;&gt; /*&lt;!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement(&quot;script&quot;), l=(&quot;&quot;+window.location).replace(/&apos;/g,&quot;%27&quot;) || hcb_user.PAGE, h=&quot;//www.htmlcommentbox.com&quot;;s.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);s.setAttribute(&quot;src&quot;, h+&quot;/jread?page=&quot;+encodeURIComponent(l).replace(&quot;+&quot;,&quot;%2B&quot;)+&quot;&amp;opts=16862&amp;num=10&quot;);if (typeof s!=&quot;undefined&quot;) document.getElementsByTagName(&quot;head&quot;)[0].appendChild(s);})(); /*--&gt;*/ &lt;/script&gt;
+&lt;!-- end htmlcommentbox.com --&gt;
 
 	</description>
     </item>
