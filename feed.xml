@@ -6,9 +6,79 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Mon, 16 Mar 2015 17:42:26 +0530</pubDate>
-    <lastBuildDate>Mon, 16 Mar 2015 17:42:26 +0530</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2015 11:49:16 +0530</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2015 11:49:16 +0530</lastBuildDate>
 
+    <item>
+      <title>Invalid signature file digest - Maven solution </title>
+      <link>http://jbake.org/blog/2015/Invalid-Singature.html</link>
+      <pubDate>Tue, 24 Mar 2015 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">blog/2015/Invalid-Singature.html</guid>
+      	<description>
+	Are you getting this exception ?
+&lt;pre class=&quot;prettyprint&quot;&gt;
+&lt;code&gt;
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread &quot;main&quot; java.lang.SecurityException: Invalid signature file digest for Manifest main attributes
+	at sun.security.util.SignatureFileVerifier.processImpl(SignatureFileVerifier.java:284)
+	at sun.security.util.SignatureFileVerifier.process(SignatureFileVerifier.java:238)
+	at java.util.jar.JarVerifier.processEntry(JarVerifier.java:273)
+	at java.util.jar.JarVerifier.update(JarVerifier.java:228)
+	at java.util.jar.JarFile.initializeVerifier(JarFile.java:383)
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;If you a mere mortal like I am and have got this SecurityException after adding a maven repository read on. 
+    The most basic cause of such a exception is some dependency define in pom.xml is pulling in jars which are singed. After building your application unzip the final jar that gets created for your application. 
+&lt;p&gt;
+    In my case its GitFx-1.0-SNAPSHOT.jar. Unzip GitFx-1.0-SNAPSHOT.jar or
+    do a jar -xvf GitFx-1.0-SNAPSHOT.jar. Inspect the META_INF folder. 
+    You will find &lt;b&gt;.RSA,.SF or .DSA&lt;/b&gt; present under META_INF. This is signed information. The best way to explain why one gets the exception at runtime is “Some of your dependencies are likely signed jarfiles. When you combine them all into one big jarfile, the corresponding signatures are no longer valid so the runtime halts.”  - StackOverflow Answer[1] 
+&lt;/p&gt;
+Solution to fix this with &lt;b&gt;maven-dependency-plugin&lt;/b&gt;. Small snippet of code in my pom.xml. 
+
+&lt;pre class=&quot;prettyprint linenums lang-xml&quot;&gt;&lt;span style=&quot;color:#ee3030;&quot;&gt;&lt;/span&gt;
+&amp;lt;plugin&amp;gt;
+    &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;maven-dependency-plugin&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.6&amp;lt;/version&amp;gt;
+    &amp;lt;executions&amp;gt;
+        &amp;lt;execution&amp;gt;
+            &amp;lt;id&amp;gt;unpack-dependencies&amp;lt;/id&amp;gt;
+            &amp;lt;phase&amp;gt;package&amp;lt;/phase&amp;gt;
+            &amp;lt;goals&amp;gt;
+                &amp;lt;goal&amp;gt;unpack-dependencies&amp;lt;/goal&amp;gt;
+            &amp;lt;/goals&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;excludeScope&amp;gt;system&amp;lt;/excludeScope&amp;gt;
+                &amp;lt;excludes&amp;gt;META-INF/*.SF&amp;lt;/excludes&amp;gt;
+                &amp;lt;excludes&amp;gt;META-INF/*.DSA&amp;lt;/excludes&amp;gt;
+                &amp;lt;excludes&amp;gt;META-INF/*.RSA&amp;lt;/excludes&amp;gt;
+                &amp;lt;excludeGroupIds&amp;gt;junit,org.mockito,org.hamcrest&amp;lt;/excludeGroupIds&amp;gt;
+                &amp;lt;outputDirectory&amp;gt;${project.build.directory}/classes&amp;lt;/outputDirectory&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+        &amp;lt;/execution&amp;gt;
+    &amp;lt;/executions&amp;gt;
+&amp;lt;/plugin&amp;gt;
+
+&lt;/pre&gt;
+Line # 15,16 and 17 is where we prevent the signed information from going into our final consolidated jar file. 
+&lt;P&gt;Some more information about the plugins configuration can be found  
+    &lt;a href=&quot;https://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artifacts.html&quot;&gt;here[2]&lt;/a&gt;
+&lt;/P&gt;
+Hope this helps :) 
+&lt;P&gt;
+    &lt;b&gt; References:&lt;/b&gt;
+&lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/999489/invalid-signature-file-when-attempting-to-run-a-jar&quot;&gt;Stack OverFlow&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artifacts.html&quot;&gt;Apache Maven - Unpacking Specific Artifacts&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+	</description>
+    </item>
     <item>
       <title>JavaFX Introduction</title>
       <link>http://jbake.org/blog/2015/JavaFX-Introduction.html</link>
@@ -21,7 +91,6 @@ has a collection of Java Packages with ability to add fancy GUI to your Java app
 JavaFX is official standard part of Java platform. JavaFX is considered as a successor of Swing
 and can be easily understood by a Swing developer. You can get the latest in JavaFX in early access preview 
 of JavaFX in &lt;a href=&quot;https://jdk8.java.net/download.html&quot;&gt;Java 8 EA 40&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;b&gt;History:&lt;/b&gt; Formerly it was called in F3(Form Follows function) and developed by Oliver Smith at Sun 
     Microsystems. JavaFX was initially developed as a scripting language however it was later 
     discontinued by Oracle and declared dead in Java One 2010. Now JavaFX has a clean Java API. 
@@ -126,7 +195,8 @@ public class SampleApplication extends Application {
     &lt;li&gt;In main (the main entry point for java application) launch is called. This launches
         the JavaFX application.&lt;/li&gt;&lt;/ul&gt; 
 &lt;/P&gt;
-
+Here is the &lt;a href=&quot;http://www.slideshare.net/RohitVaidya3/java-fx-45822425&quot;&gt;link&lt;/a&gt; to slideshare presentation
+        &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?&apos;http&apos;:&apos;https&apos;;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+&quot;://platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;
 &lt;!-- Begin Comments JavaScript Code --&gt;&lt;script type=&quot;text/javascript&quot; async&gt;function ajaxpath_5506c83b47591(url){return window.location.href == &apos;&apos; ? url : url.replace(&apos;&amp;s=&apos;,&apos;&amp;s=&apos; + escape(window.location.href));}(function(){document.write(&apos;&lt;div id=&quot;fcs_div_5506c83b47591&quot;&gt;&lt;a title=&quot;free comment script&quot; href=&quot;http://www.freecommentscript.com&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Free HTML User Comments&lt;/b&gt;...&lt;/a&gt;&lt;/div&gt;&apos;);fcs_5506c83b47591=document.createElement(&apos;script&apos;);fcs_5506c83b47591.type=&quot;text/javascript&quot;;fcs_5506c83b47591.src=ajaxpath_5506c83b47591((document.location.protocol==&quot;https:&quot;?&quot;https:&quot;:&quot;http:&quot;)+&quot;//www.freecommentscript.com/GetComments2.php?p=5506c83b47591&amp;s=&amp;Size=10#!5506c83b47591&quot;);setTimeout(&quot;document.getElementById(&apos;fcs_div_5506c83b47591&apos;).appendChild(fcs_5506c83b47591)&quot;,1);})();&lt;/script&gt;&lt;noscript&gt;&lt;div&gt;&lt;a href=&quot;http://www.freecommentscript.com&quot; title=&quot;free html user comment box&quot;&gt;Free Comment Script&lt;/a&gt;&lt;/div&gt;&lt;/noscript&gt;&lt;!-- End Comments JavaScript Code --&gt;
 
 	</description>
