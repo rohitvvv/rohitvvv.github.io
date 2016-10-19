@@ -6,13 +6,13 @@
     <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Wed, 19 Oct 2016 21:02:58 +0530</pubDate>
-    <lastBuildDate>Wed, 19 Oct 2016 21:02:58 +0530</lastBuildDate>
+    <pubDate>Wed, 19 Oct 2016 21:19:24 +0530</pubDate>
+    <lastBuildDate>Wed, 19 Oct 2016 21:19:24 +0530</lastBuildDate>
 
     <item>
       <title>Functional Programming with Clojure</title>
       <link>http://jbake.org/blog/2016/Clojure.html</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0530</pubDate>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2016/Clojure.html</guid>
       	<description>
 	&lt;div&gt;
