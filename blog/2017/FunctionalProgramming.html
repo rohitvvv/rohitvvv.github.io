@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Functional Programming in JavaScript, Clojure, Java and Python-Part 1</title>
+    <title>Functional Programming in JavaScript, Clojure, Kotlin, Java and Python-Part 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -68,7 +68,7 @@
     <div class="container">
 
 	<div class="page-header">
-		<h1>Functional Programming in JavaScript, Clojure, Java and Python-Part 1</h1>
+		<h1>Functional Programming in JavaScript, Clojure, Kotlin, Java and Python-Part 1</h1>
 	</div>
 
 	<p><em>19 November 2017</em></p>
@@ -80,6 +80,7 @@
     <p>Map, Reduce and Filter are higher order functions.
         In Mathematics a higher order function are function that operate on other functions either by taking them
         as arguments or returning them.</p>
+
 </div>
 <!--more-->
 <h2>Map</h2> <b>Map</b>
@@ -134,7 +135,17 @@ Output: 1 2 3 4 5
 </pre>
 
 </P>
+<P>
+    <b>Kotlin</b>
+<pre class="prettyprint">
+<code>
+print((0..4).map { it + 1 })
 
+Output: 1 2 3 4 5
+</code>
+</pre>
+
+</P>
 
 <P>
     <b>Clojure</b>
@@ -224,7 +235,16 @@ Output: 15
 
 </P>
 
+<P>
+    <b>Kotlin</b>
+<pre class="prettyprint">
+<code>
+print((1..5).reduce { sum, next -> sum + next })
+Output: 15
+</code>
+</pre>
 
+</P>
 <P>
     <b>Clojure</b>
 <pre class="prettyprint">
@@ -306,6 +326,18 @@ Output:
 </pre>
 
 </P>
+<P>
+    <b>Kotlin</b>
+<pre class="prettyprint">
+<code>
+print((0..10).filter { it % 2 == 0 })
+
+Output:[ 0, 2, 4, 6, 8, 10 ]
+
+</code>
+</pre>
+
+</P>
 
 
 <P>
@@ -333,7 +365,9 @@ Output:[0, 2, 4, 6, 8]
 </pre>
 
 I hope you liked the post. Please share your comments.
-
+</br>
+<p>&nbsp</p>
+<b>Credits:</b>Kotlin code was contributed by <b>Anton Kirvel</b>
 
 </p>
 
@@ -353,7 +387,6 @@ I hope you liked the post. Please share your comments.
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 <!-- end htmlcommentbox.com -->
-
 </p>
 
 	<hr />
